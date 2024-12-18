@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'easyswoole/mysqli' => array(
+            'pretty_version' => '4.0.10',
+            'version' => '4.0.10.0',
+            'reference' => 'bb0836a993821522d4d55ba50d2071a917f2560a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../easyswoole/mysqli',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'easyswoole/spl' => array(
+            'pretty_version' => '2.1.3',
+            'version' => '2.1.3.0',
+            'reference' => '6ca7321e476a40a3b70b15b836830ff030eec516',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../easyswoole/spl',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

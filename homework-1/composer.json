@@ -1,0 +1,5 @@
+{
+    "require": {
+        "easyswoole/mysqli": "^4.0.10"
+    }
+}
