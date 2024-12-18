@@ -32,7 +32,7 @@
             document.getElementById("signupForm").addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                fetch("signup/action.php", {
+                fetch("action.php", {
                     method: "POST",
                     body: new FormData(this),
                 })
