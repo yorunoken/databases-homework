@@ -1,0 +1,11 @@
+# Dependencies
+/vendor/
+composer.lock
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs and runtime files
+*.log
+php_errors.log
