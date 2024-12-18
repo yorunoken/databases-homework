@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <main class="dashboard">
+                <h1 class="dashboard__title">Welcome to Your Dashboard</h1>
+                <div class="profile">
+                    <h2 class="profile__title">Your Profile</h2>
+                    <p class="profile__info">Username: <span id="username"></span></p>
+                    <p class="profile__info">Email: <span id="email"></span></p>
+                </div>
+                <button id="logoutBtn" class="btn btn--logout">Logout</button>
+            </main>
+        </div>
+
+        <script>
+            fetch("check_session.php")
+                .then((response) => response.json())
+                .then((data) => {
+                    if (!data.loggedIn) {
+                        window.location.href = "/signin/";
+                    } else {
+                        document.getElementById("username").textContent = data.username;
+                        document.getElementById("email").textContent = data.email;
+                    }
+                });
+
+            document.getElementById("logoutBtn").addEventListener("click", () => {
+                fetch("logout.php").then(() => {
+                    window.location.href = "/signin/";
+                });
+            });
+        </script>
+    </body>
+</html>
