@@ -5,10 +5,10 @@ $password = "0410";
 $dbname = "homework";
 
 $connection = new mysqli($servername, $username, $password, $dbname);
-$response = array('success' => false, 'message' => '');
+$response = ['success' => false, 'message' => ''];
 
 if ($connection->connect_error) {
-    $response['message'] = "Connection failed: " . $connection->connect_error;
+    $response['message'] = "Connection failed:  $connection->connect_error";
     echo json_encode($response);
     exit;
 }
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $response['success'] = true;
         $response['message'] = "Created successfully!";
     } else {
-        $response['message'] = "Error: " . $stmt->error;
+        $response['message'] = "Error: $stmt->error";
     }
 
 
@@ -47,4 +47,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode($response);
     exit;
 }
-?>

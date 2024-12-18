@@ -5,7 +5,7 @@
         <title></title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="index/index.css" />
+        <link rel="stylesheet" href="signup/index.css" />
     </head>
 
     <body>
@@ -13,7 +13,7 @@
             <h2>Sign up form</h2>
             <div id="message" class="success" style="display: none"></div>
             <div class="form-container">
-                <form id="signupForm" action="index/signup.php" method="post">
+                <form id="signupForm" method="post">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required /><br /><br />
 
@@ -32,7 +32,7 @@
             document.getElementById("signupForm").addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                fetch("index/signup.php", {
+                fetch("signup/action.php", {
                     method: "POST",
                     body: new FormData(this),
                 })
