@@ -1,1 +1,1 @@
-php -S localhost:8080 -c php.ini
+php -S localhost:3000 -c php.ini
